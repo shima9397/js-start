@@ -13,13 +13,13 @@
 // exception.
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw
-
-let convertToInt = (myNumber) => {
-  if (typeof myNumber === "boolean") {
-    throw "myNumber can not be boolean!";
+let myNumber;
+let convertToInt = (inputNumber) => {
+  if (typeof inputNumber === "boolean") {
+    throw "inputNumber can not be boolean!";
   }
 
-  return parseInt(myNumber);
+  return parseInt(inputNumber);
 };
 
 try {
@@ -27,51 +27,57 @@ try {
 } catch (e) {
   console.error(e);
 }
-
+myNumber = 43.98;
 console.log(
   `typeof myNumber is : ${typeof myNumber} and converted to integer: ${convertToInt(
-    43.98
+    myNumber
   )}`
 );
+myNumber = NaN;
 console.log(
   `typeof myNumber is : ${typeof myNumber} and converted to integer: ${convertToInt(
-    NaN
+    myNumber
   )}`
 );
+myNumber = null;
 console.log(
   `typeof myNumber is : ${typeof myNumber} and converted to integer: ${convertToInt(
-    null
+    myNumber
   )}`
 );
+myNumber = 12;
 console.log(
   `typeof myNumber is : ${typeof myNumber} and converted to integer: ${convertToInt(
-    12
+    myNumber
   )}`
 );
+myNumber = -1;
 console.log(
   `typeof myNumber is : ${typeof myNumber} and converted to integer: ${convertToInt(
-    -1
+    myNumber
   )}`
 );
-// console.log(
-//   `typeof myNumber is : ${typeof myNumber} and converted to integer:  ${convertToInt(
-//     true
-//   )}`
-// );
-
-console.log(
-  `typeof myNumber is : ${typeof myNumber} and converted to integer: ${convertToInt(
-    "23"
-  )}`
-);
-console.log(
-  `typeof myNumber is : ${typeof myNumber} and converted to integer: ${convertToInt(
-    "shima"
-  )}`
-);
-
+myNumber = true;
 console.log(
   `typeof myNumber is : ${typeof myNumber} and converted to integer:  ${convertToInt(
-    false
+    myNumber
+  )}`
+);
+myNumber = "23";
+console.log(
+  `typeof myNumber is : ${typeof myNumber} and converted to integer: ${convertToInt(
+    myNumber
+  )}`
+);
+myNumber = "shima";
+console.log(
+  `typeof myNumber is : ${typeof myNumber} and converted to integer: ${convertToInt(
+    myNumber
+  )}`
+);
+myNumber = false;
+console.log(
+  `typeof myNumber is : ${typeof myNumber} and converted to integer:  ${convertToInt(
+    myNumber
   )}`
 );
