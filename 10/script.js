@@ -12,11 +12,11 @@ let increase = (update) => {
     return update > product_count ? (product_count = update) : product_count;
   }
 };
-// console.log(increase());
-// console.log(increase());
-// console.log(increase(12));
-// console.log(increase(6));
-// console.log(increase(60));
+console.log(increase());
+console.log(increase());
+console.log(increase(12));
+console.log(increase(6));
+console.log(increase(60));
 
 let decrease = (update) => {
   if (update === undefined) {
@@ -37,9 +37,9 @@ try {
   console.error(e);
 }
 
-console.log("before error");
+//console.log("before error");
 console.log(decrease());
-console.log("after error");
+//console.log("after error");
 console.log(decrease());
 console.log(decrease());
 console.log(decrease());
